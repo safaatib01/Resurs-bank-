@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<div class="first">Ange önskat lånebelopp
+</div>
+<div class="rectangle">
+  <div class="main">
+ <div>
+    <p class="mini">500 000 kr</p>
+    <p class="låne">
+        <label>Lånebelopp</label>
+        <br>
+        <input type="range" id="Lånebelopp" value="" min="10000" max="500000" 
+            oninput="document.getElementById('fPrice').innerHTML = this.value" />
+        <label id="fPrice"></label>
+    </p>
+    <p class="max">10 000 kr
+    </p>
+    <p class="åter">
+        <label>Återbetalningstid</label>
+        <br>
+        <input type="range" id="Återbetalningstid" value="" min="24" max="180" 
+            oninput="document.getElementById('tPrice').innerHTML = this.value" />
+        <label id="tPrice"></label>
+    </p>
+    <p class="minim">24 månader</p>
+        <p class="maxm">180 månader</p>
+    <p id="demo"></p>
+</div>
+</div>
+<div class="rectangle"></div>
+<form class="månadskostnad">
+    
+    <input type="button" onClick="divideBy()" Value="Din månadskostnad" />
+    </form>
+    <span id = "result"></span>
+    </p>
+
+    <script>
+    /*
+var numOne, numTwo, din;
+  numOne = parseInt(document.getElementById("Lånebelopp").value);
+  numTwo = parseInt(document.getElementById("Återbetalningstid").value);
+  din = numOne + numTwo;
+
+function myFunction() {
+    var x = document.getElementById("din").value;
+    document.getElementById("demo").innerHTML = x;
+  }
+  */
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("Lånebelopp").value;
+        num2 = document.getElementById("Återbetalningstid").value;
+        num3 = 0,02 ;
+        num4 = num1 * num3 ;
+document.getElementById("result").innerHTML = num1 / num2 + num4;
+}
+</script>
+
+    </body>
+</html>
